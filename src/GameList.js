@@ -6,9 +6,10 @@ const mapStateToProps = (state) =>({
 })
 
 function myGamesList(props){
+    console.log(props)
     return(
         <>
-        {props.myGamesData.map(game =>{
+        {props.map(game =>{
            return( 
             <>
                 <GameItem game = {game} key={game._id}/>

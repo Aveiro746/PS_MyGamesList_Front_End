@@ -11,15 +11,15 @@ export default function reducer(state=initialState, action){
     switch(action.type){
         case FETCH_GAMES_START:
             return{
-                ...state,myGamesData, error: "", isLoading:true
+                ...state,myGamesData:state.data, error: "", isLoading:true
             }
         case FETCH_GAMES_FAIL:
             return{
-                ...state,myGamesData, error: action.payload, isLoading:false
+                ...state,myGamesData:state.data, error: action.payload, isLoading:false
             }
         case FETCH_GAMES_SUCCESS:
             return{
-                ...state,myGamesData, error: "",isLoading:false
+                ...state,myGamesData:state.data, error: "",isLoading:false
             }
        case ADD_GAME:
            return{
@@ -32,7 +32,7 @@ export default function reducer(state=initialState, action){
             if (state.myGamesData[i]._id === action.payload._id){
                 updatedState.push(action.payload)
             } else{
-                updatedState.push(state.ToDoData[i])
+                updatedState.push(state.myGamesData[i])
             }
         }
             return {
