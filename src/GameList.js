@@ -2,20 +2,21 @@ import { connect } from 'react-redux'
 import GameItem from './GameItem'
 
 const mapStateToProps = (state) =>({
+    
     myGamesData: state.myGamesData
 })
 
 function myGamesList(props){
-    console.log(props)
+    console.log(props.myGamesData)
     return(
         <>
-        {props.map(game =>{
+        {props.myGamesData.length > 0 ? props.myGamesData.map(game =>{
            return( 
             <>
-                <GameItem game = {game} key={game._id}/>
+                <GameItem game = {game} key={game.id}/>
             </>
            )
-        })}
+        }):"loading"}
         </>
     )
 }

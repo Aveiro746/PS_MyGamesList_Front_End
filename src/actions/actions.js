@@ -13,7 +13,8 @@ export const fetchgamelist = () => (dispatch) => {
     axios
     .get("https://mygamelist-server.herokuapp.com/mygames")
     .then(data => {
-        dispatch({type: FETCH_GAMES_SUCCESS, payload: data.game_list})
+        console.log(data.data.game_list)
+        dispatch({type: FETCH_GAMES_SUCCESS, payload: data.data.game_list})
     })
     .catch(err =>{
         dispatch({type: FETCH_GAMES_FAIL,payload: err.message})
