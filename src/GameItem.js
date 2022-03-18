@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { removeGame , updategame } from './actions/actions'
 
 function GameItem(props){
-    console.log(props.game)
+    console.log(props)
     const [completed, setCompleted] = useState(props.game.completed)
     async function handleUpdate(e){
         e.preventDefault()
@@ -19,9 +19,10 @@ function GameItem(props){
     }
     return(
         <>
-        <h2>{props.game.Title}</h2>
-        <p>{props.game.Platforms}</p>
-        <h6>{props.game.Genre}</h6>
+        
+        <h2>{props.game.title}</h2>
+        <p>{props.game.platforms}</p>
+        <h6>{props.game.genre}</h6>
         <h3 onClick={handleUpdate}>{completed? "GAME COMPLETE!" : "STILL PLAYING!"}</h3>
         <button id = {props.game._id} onClick={handleClick}>DELETE</button>
         </>

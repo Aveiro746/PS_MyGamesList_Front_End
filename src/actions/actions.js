@@ -13,7 +13,6 @@ export const fetchgamelist = () => (dispatch) => {
     axios
     .get("https://mygamelist-server.herokuapp.com/mygames")
     .then(data => {
-        console.log(data.data.game_list)
         dispatch({type: FETCH_GAMES_SUCCESS, payload: data.data.game_list})
     })
     .catch(err =>{
@@ -22,10 +21,11 @@ export const fetchgamelist = () => (dispatch) => {
 }
 
 export const addgame = (game) => (dispatch) =>{
+    
     dispatch({type: FETCH_GAMES_START})
     axios
-    .post("https://mygamelist-server.herokuapp.com/mygames")
-    .then(data =>dispatch({type: ADD_GAME, payload:data.game_item}))
+    .post("https://mygamelist-server.herokuapp.com/mygames", game)
+    .then(data =>dispatch({type: ADD_GAME, payload:game}))
     .catch(err => dispatch({type:FETCH_GAMES_FAIL, payload: err.message}))
 
 }

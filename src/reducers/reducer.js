@@ -21,14 +21,13 @@ export default function reducer(state=initialState, action){
                  error: action.payload, isLoading:false
             }
         case FETCH_GAMES_SUCCESS:
-            console.log(action.payload)
-            console.log(state.myGamesData)
             return{
                 ...state,
                 myGamesData:[...state.myGamesData,...action.payload],
                  error: "",
                  isLoading:false
             }
+           
        case ADD_GAME:
            return{
                ...state,myGamesData: [...state.myGamesData, action.payload], isLoading:false

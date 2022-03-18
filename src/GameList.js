@@ -7,16 +7,20 @@ const mapStateToProps = (state) =>({
 })
 
 function myGamesList(props){
-    console.log(props.myGamesData)
+    
     return(
         <>
-        {props.myGamesData.length > 0 ? props.myGamesData.map(game =>{
+        { props.myGamesData.map(game =>{
+            
            return( 
+               
             <>
+            
+                
                 <GameItem game = {game} key={game.id}/>
             </>
            )
-        }):"loading"}
+        })}
         </>
     )
 }
