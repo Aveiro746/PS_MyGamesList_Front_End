@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { removeGame , updategame } from './actions/actions'
 
 function GameItem(props){
-    console.log(props)
     const [completed, setCompleted] = useState(props.game.completed)
     async function handleUpdate(e){
         e.preventDefault()
@@ -16,6 +15,7 @@ function GameItem(props){
         e.preventDefault()
         props.removeGame(e.target.id,
             props.game)
+           
     }
     return(
         <>

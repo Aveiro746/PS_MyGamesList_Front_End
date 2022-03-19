@@ -41,7 +41,7 @@ export const updategame=(id,update) => (dispatch) => {
 export const removeGame = (id, game) => (dispatch) =>{
     dispatch({type: FETCH_GAMES_START})
     axios
-    .put(`https://mygamelist-server.herokuapp.com/mygames/${id}`)
-    .then(data => console.log(data.game_item))
+    .put(`https://mygamelist-server.herokuapp.com/mygames/${id}`, game)
+    .then(data => dispatch({type: REMOVE_GAME, payload: game}))
     .catch(err => dispatch({type: FETCH_GAMES_FAIL, payload:err.message}))
 }
