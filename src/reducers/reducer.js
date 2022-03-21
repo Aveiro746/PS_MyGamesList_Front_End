@@ -1,11 +1,17 @@
 
-import { ADD_GAME,REMOVE_GAME,FETCH_GAMES_SUCCESS,FETCH_GAMES_FAIL, FETCH_GAMES_START, UPDATE_GAME} from '../actions/actions'
+import { ADD_GAME,REMOVE_GAME,
+        FETCH_GAMES_SUCCESS,
+        FETCH_GAMES_FAIL,
+        FETCH_GAMES_START,
+        UPDATE_GAME,FETCH_NEW_GAMES_START,
+        FETCH_NEW_GAMES_SUCCESS,FETCH_NEW_GAMES_FAIL} from '../actions/actions'
 
 
 const initialState = {
     myGamesData: [],
     isLoading:false,
-    error: ""
+    error: "",
+    browseGamesData:[]
 
 }
 export default function reducer(state=initialState, action){
@@ -50,6 +56,20 @@ export default function reducer(state=initialState, action){
             let newState = state.myGamesData.filter(item => item !== action.payload)
             return{
                 ...state, myGamesData:newState
+            }
+            
+        case FETCH_NEW_GAMES_START:
+            return{
+                ...state, isLoading:true,browseGamesData:[],error:""
+            }
+        case FETCH_NEW_GAMES_SUCCESS:
+            console.log(action.payload)
+            return{
+                ...state, browseGamesData:action.payload,isLoading:false, error:""
+            }
+        case FETCH_NEW_GAMES_FAIL:
+            return{
+                ...state,isLoading:false, error:action.payload, browseGamesData:[]
             }
         default:
             return state

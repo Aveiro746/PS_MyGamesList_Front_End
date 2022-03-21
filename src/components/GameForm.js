@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { connect } from 'react-redux'
-import { addgame } from './actions/actions'
+import { addgame } from '../actions/actions'
 
 function GameForm(props){
     const [initialForm] = useState({

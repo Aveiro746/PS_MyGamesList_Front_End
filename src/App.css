@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -35,4 +36,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-image: linear-gradient(120deg, #f6d365, #fda085);
+}
+
+
+.gamelist{
+  margin: 10px;
+  padding: 50px;
+ 
+  
+}
+
+
+form button {
+  color: #d88771;
+  background: white;
+ 
+}
+
+form button:hover {
+  background: #d88771;
+  color: white;
+}
+
+button {
+  color: red;
+  background: white;
+ 
+}
+
+button:hover {
+  background: red;
+  color: white;
+}
+
+p{
+  color:aliceblue;
 }
