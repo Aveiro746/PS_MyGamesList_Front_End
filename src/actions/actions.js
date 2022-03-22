@@ -51,15 +51,4 @@ export const removeGame = (id, game) => (dispatch) =>{
     .catch(err => dispatch({type: FETCH_GAMES_FAIL, payload:err.message}))
 }
 
-//PULL FROM RAWG GAMES API
-export const fetchgames = () => dispatch => {
-    dispatch({type: FETCH_NEW_GAMES_START})
-    axios
-    .get('https://api.rawg.io/api/platforms?key=afb57002e85b4a82a08d30d1e1815873')
-    .then(data => {console.log(data);
-       dispatch({type:FETCH_NEW_GAMES_SUCCESS, payload:data.data}) 
-    })
-    .catch(err => {
-        dispatch({type: FETCH_NEW_GAMES_FAIL, payload: err.message})
-    })
-}
+
