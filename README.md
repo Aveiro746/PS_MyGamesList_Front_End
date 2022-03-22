@@ -1,5 +1,5 @@
 # My Games List APP
-Back end hosted at : https://mygamelist-server.herokuapp.com/mygames
+Your own person game list to keep track of your ongoing games!
 
 # Upcoming Features:
 
@@ -19,3 +19,12 @@ Back end hosted at : https://mygamelist-server.herokuapp.com/mygames
 - react-scripts
 - redux
 - redux-thunk 
+
+# BackEnd
+Back end hosted at : https://mygamelist-server.herokuapp.com/mygames
+
+
+
+
+
+Created using create-react-app
