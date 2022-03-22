@@ -11,7 +11,7 @@ export const FETCH_NEW_GAMES_START = "FETCH_NEW_GAMES_START"
 export const FETCH_NEW_GAMES_SUCCESS = "FETCH_NEW_GAMES_SUCCESS"
 export const FETCH_NEW_GAMES_FAIL = "FETCH_NEW_GAMES_FAIL"
 
-//Pull from Mongo API
+
 export const fetchgamelist = () => (dispatch) => {
     dispatch({type: FETCH_GAMES_START})
 
