@@ -4,8 +4,11 @@ const Navbar=() => {
     return(
         <nav>
             <Link to = '/browsegames'>Find Games!</Link>
-            <br></br>
+            <br/>
             <Link to ='/mygamelist'>My Games</Link>
+            <br/>
+            <Link to ='/'>Home</Link>
+
         </nav>
     )
 }

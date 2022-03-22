@@ -1,17 +1,6 @@
 import axios from "axios";
 import {useState, useEffect} from 'react'
 
-
-// export const fetchgames = ()=> {
-//     axios
-//     .get('https://api.rawg.io/api/platforms?key=afb57002e85b4a82a08d30d1e1815873')
-//     .then(data => {console.log(data);
-//     })
-//     .catch(err => {
-//     })
-// }
-
-
 const Browsegames = () =>{
     const [videoGames, setvideoGames] = useState(null)
 
@@ -34,16 +23,11 @@ const Browsegames = () =>{
                 <input type='text' id="gameSearch"/>
                 <input type='submit'/>
             </form>
+
+
         </div>
     )
 }
-
-   
-    
+  
 
 export default Browsegames;
-
-   // console.log(props)
-    // function handleClick(e){
-    //     e.preventDefault()
-    //     fetchgamelist()
