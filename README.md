@@ -25,6 +25,9 @@ Your own person game list to keep track of your ongoing games!
 # BackEnd
 Back end hosted [here](https://mygamelist-server.herokuapp.com/mygames)
 
+# API:
+https://rawg.io/apidocs
+
 
 
 
