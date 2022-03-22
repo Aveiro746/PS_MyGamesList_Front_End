@@ -22,9 +22,14 @@ const Browsegames = () =>{
     }
     fetchGames()
     },[])
+
+     function handleSubmit(e) {
+        e.preventDefault();
+        console.log(videoGames)
+    }
     return(
         <div>
-            <form>
+            <form onSubmit = {handleSubmit}>
                 <label htmlFor="gameSearch">Game Search</label>
                 <input type='text' id="gameSearch"/>
                 <input type='submit'/>

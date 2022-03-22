@@ -2,6 +2,7 @@ import './App.css';
 import { Switch , Route } from 'react-router'
 import GameList from './components/GameList'
 import GameForm from './components/GameForm'
+import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 import {useEffect} from 'react'
@@ -34,6 +35,10 @@ function App(props) {
       
         <Route path = '/browsegames'>
           <Browsegames/>
+        </Route>
+
+        <Route exact path ='/'>
+          <Home/>
         </Route>
       </Switch>
      
