@@ -9,4 +9,11 @@ Back end hosted at : https://mygamelist-server.herokuapp.com/mygames
 - Wishlist coming soon! 
 - Site deployment coming soon! 
 
-#Dependencies
+
+# Dependencies
+- axios
+- react-dom
+- react-redux
+- react-router
+   
+   
