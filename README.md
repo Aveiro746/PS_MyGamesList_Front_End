@@ -7,5 +7,6 @@ Back end hosted at : https://mygamelist-server.herokuapp.com/mygames
 - Improved styling
 - PICTURES!
 - Wishlist coming soon! 
+- Site deployment coming soon! 
 
 #Dependencies
