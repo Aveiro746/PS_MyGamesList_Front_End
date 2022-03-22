@@ -19,6 +19,7 @@ Your own person game list to keep track of your ongoing games!
 - react-scripts
 - redux
 - redux-thunk 
+- redx dev tools
 
 
 # BackEnd
