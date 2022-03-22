@@ -15,5 +15,7 @@ Back end hosted at : https://mygamelist-server.herokuapp.com/mygames
 - react-dom
 - react-redux
 - react-router
-   
-   
+- react-router-dom
+- react-scripts
+- redux
+ 
